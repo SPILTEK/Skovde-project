@@ -761,6 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702927723}
   - component: {fileID: 1702927722}
+  - component: {fileID: 1702927725}
   - component: {fileID: 1702927724}
   m_Layer: 0
   m_Name: Person
@@ -846,14 +847,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702927721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 169afa8563d8bcd408e46f86742b32d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 10
-  shakeMagnitude: 0.05
-  lerpSpeed: 1000
+  shakeDuration: 0.5
+  shakeMagnitude: 0.1
+  lerpSpeed: 10
+--- !u!114 &1702927725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702927721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1b170357fe03047ad8fd648ba36178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squeezeFactor: {x: 0.8, y: 1.2}
+  duration: 5
 --- !u!1 &1779666385
 GameObject:
   m_ObjectHideFlags: 0
