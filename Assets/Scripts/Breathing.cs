@@ -1,38 +1,47 @@
 using UnityEngine;
 using System.Collections;
 
-public class Breathing : MonoBehaviour
+public class CharacterSqueeze : MonoBehaviour
 {
-    // The factor to apply when squeezing:
-    // For example, 0.8f on X will reduce width, and 1.2f on Y will increase height.
+    // Squeeze factor: e.g., reducing width to 80% and increasing height to 120%
     public Vector2 squeezeFactor = new Vector2(0.8f, 1.2f);
-
-    // Duration (in seconds) for both squeezing and unsqueezing phases.
+    // Duration (in seconds) for one squeeze or unsqueeze phase.
     public float duration = 0.2f;
+    // Total time (in seconds) for which the squeeze effect should repeat.
+    public float repeatDuration = 2.0f;
 
     private Vector3 originalScale;
+    private bool isRepeating = false;
 
     private void Start()
     {
-        // Store the original scale so we can return to it later.
+        // Cache the original scale to return to it later.
         originalScale = transform.localScale;
-        SqueezeAndUnsqueeze();
+        StartRepeatSqueeze();
     }
 
-    // Call this method to trigger the squeeze effect.
+    /// <summary>
+    /// Triggers a single squeeze and unsqueeze effect.
+    /// </summary>
     public void SqueezeAndUnsqueeze()
     {
-        StopAllCoroutines(); // Ensure no other squeeze is running.
+        StopAllCoroutines();
         StartCoroutine(SqueezeRoutine());
     }
 
+    /// <summary>
+    /// Coroutine that handles the squeeze and unsqueeze animation.
+    /// </summary>
     private IEnumerator SqueezeRoutine()
     {
-        // Calculate the target scale using the provided squeeze factors.
-        Vector3 targetScale = new Vector3(originalScale.x * squeezeFactor.x, originalScale.y * squeezeFactor.y, originalScale.z);
-        float elapsed = 0f;
+        Vector3 targetScale = new Vector3(
+            originalScale.x * squeezeFactor.x,
+            originalScale.y * squeezeFactor.y,
+            originalScale.z
+        );
 
-        // First phase: Squeeze (transition to the target scale).
+        float elapsed = 0f;
+        // Squeeze phase: Lerp from originalScale to targetScale.
         while (elapsed < duration)
         {
             transform.localScale = Vector3.Lerp(originalScale, targetScale, elapsed / duration);
@@ -41,7 +50,7 @@ public class Breathing : MonoBehaviour
         }
         transform.localScale = targetScale;
 
-        // Second phase: Unsqueeze (transition back to the original scale).
+        // Unsqueeze phase: Lerp back to originalScale.
         elapsed = 0f;
         while (elapsed < duration)
         {
@@ -50,5 +59,42 @@ public class Breathing : MonoBehaviour
             yield return null;
         }
         transform.localScale = originalScale;
+    }
+
+    /// <summary>
+    /// Starts the repeated squeeze effect for the duration specified by repeatDuration.
+    /// </summary>
+    public void StartRepeatSqueeze()
+    {
+        if (!isRepeating)
+        {
+            isRepeating = true;
+            StartCoroutine(RepeatSqueezeRoutine());
+        }
+    }
+
+    /// <summary>
+    /// Stops the repeating squeeze effect.
+    /// </summary>
+    public void StopRepeatSqueeze()
+    {
+        isRepeating = false;
+    }
+
+    /// <summary>
+    /// Coroutine that repeats the squeeze effect until the total repeatDuration elapses.
+    /// </summary>
+    private IEnumerator RepeatSqueezeRoutine()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < repeatDuration && isRepeating)
+        {
+            yield return SqueezeRoutine();
+            // Each complete cycle (squeeze + unsqueeze) takes 2 * duration seconds.
+            elapsedTime += 2 * duration;
+        }
+        // Ensure the scale resets after finishing.
+        transform.localScale = originalScale;
+        isRepeating = false;
     }
 }
