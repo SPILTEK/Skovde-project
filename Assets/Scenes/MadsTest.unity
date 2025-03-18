@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 215055012}
   - component: {fileID: 215055011}
   m_Layer: 5
-  m_Name: Blue Text
+  m_Name: BlueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &229510034
 BoxCollider2D:
@@ -480,7 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &318610167
 BoxCollider2D:
@@ -762,7 +760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &489729665
 BoxCollider2D:
@@ -992,7 +989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &562713045
 BoxCollider2D:
@@ -1463,7 +1459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &844249009
 BoxCollider2D:
@@ -1556,7 +1551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &1058376425
 BoxCollider2D:
@@ -2197,7 +2191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &1727907024
 BoxCollider2D:
@@ -2751,7 +2744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df709c93ff764a94f8f9543295effcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
   colorManager: {fileID: 0}
 --- !u!61 &2108039472
 BoxCollider2D:
