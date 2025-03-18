@@ -464,7 +464,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 674779187}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: LoadIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

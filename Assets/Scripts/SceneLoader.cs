@@ -7,4 +7,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MadsTest");
     }
+
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene("Intro");
+    }
 }

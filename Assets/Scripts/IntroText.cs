@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 
-public class TextDisplay : MonoBehaviour
+public class IntroText : MonoBehaviour
 {
     // Reference to the UI Text component that displays the text.
     public TMP_Text displayText;
@@ -44,9 +45,14 @@ public class TextDisplay : MonoBehaviour
                 // Wait for the specified duration before showing the next text.
                 yield return new WaitForSeconds(durations[i]);
             }
-        } while (loop);
 
-        // Optionally, clear the text once the sequence is done.
-        displayText.text = "";
+            // If looping is disabled, load the "MadsTest" scene after the sequence.
+            if (!loop)
+            {
+                SceneManager.LoadScene("MadsTest");
+                yield break;  // Exit the coroutine after loading the scene.
+            }
+
+        } while (loop);
     }
 }
