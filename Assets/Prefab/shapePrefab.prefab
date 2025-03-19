@@ -78,10 +78,11 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 2, z: 0}
-  - {x: -2, y: 2, z: 0}
-  - {x: -2, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: -1, y: 1, z: 0}
+  - {x: 1, y: 1, z: 0}
+  - {x: 1, y: -1, z: 0}
+  - {x: -1, y: -1, z: 0}
+  - {x: -1, y: 1, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -89,7 +90,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.03874814
+        time: 0.0029815398
         value: 0.52982426
         inSlope: 0
         outSlope: 0

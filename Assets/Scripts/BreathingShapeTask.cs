@@ -42,11 +42,7 @@ public class BreathingShapeTask : MonoBehaviour
         {
             shapePoints.Add(lineRenderer.GetPosition(i));
         }
-        // Ensure the shape is closed by adding the first point to the end
-        if (shapePoints.Count > 0)
-        {
-            shapePoints.Add(shapePoints[0]);
-        }
+        shapePoints.Add(shapePoints[0]); // Ensure the shape closes
         currentPointIndex = 0;
     }
 
@@ -79,8 +75,11 @@ public class BreathingShapeTask : MonoBehaviour
             }
         }
 
-        if (currentPointIndex >= shapePoints.Count - 1 && drawnPoints.Count > 1 && Vector2.Distance(drawnPoints[0], drawnPoints[drawnPoints.Count - 1]) < 0.5f)
+        // Ensure last connection is drawn before checking for completion
+        if (currentPointIndex == shapePoints.Count && drawnPoints.Count == shapePoints.Count)
         {
+            playerLineRenderer.positionCount++;
+            playerLineRenderer.SetPosition(playerLineRenderer.positionCount - 1, shapePoints[0]); // Close the shape
             CompleteTask();
         }
     }
