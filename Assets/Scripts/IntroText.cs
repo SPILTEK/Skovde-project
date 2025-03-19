@@ -11,48 +11,25 @@ public class IntroText : MonoBehaviour
 
     // Array of text messages to display.
     public string[] texts;
-
-    // Array of durations (in seconds) for each text.
-    // Ensure that texts and durations arrays have the same length.
-    public float[] durations;
-
-    // Set to true if you want the text display to loop.
-    public bool loop = false;
+    int index = 0;
+    bool allTextsDisplayed = false;
 
     void Start()
     {
-        // Check for array length mismatch.
-        if (texts.Length != durations.Length)
-        {
-            Debug.LogError("The texts and durations arrays must have the same length.");
-            return;
-        }
-
-        // Start the coroutine that cycles through the text list.
-        StartCoroutine(DisplayTextSequence());
+        displayText.text = texts[index];
+        index++;
     }
 
-    IEnumerator DisplayTextSequence()
+    void OnMouseDown()
     {
-        do
+        if (index < texts.Length)
         {
-            // Iterate over each text entry.
-            for (int i = 0; i < texts.Length; i++)
-            {
-                // Set the UI Text element to the current text.
-                displayText.text = texts[i];
-
-                // Wait for the specified duration before showing the next text.
-                yield return new WaitForSeconds(durations[i]);
-            }
-
-            // If looping is disabled, load the "MadsTest" scene after the sequence.
-            if (!loop)
-            {
-                SceneManager.LoadScene("MadsTest");
-                yield break;  // Exit the coroutine after loading the scene.
-            }
-
-        } while (loop);
+            displayText.text = texts[index];
+            index++;
+        }
+        else
+        {
+            SceneManager.LoadScene("MadsTest");
+        }
     }
 }

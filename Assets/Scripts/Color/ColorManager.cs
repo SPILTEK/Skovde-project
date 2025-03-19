@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    public int blueCount = 5;
+    public int blueCount = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

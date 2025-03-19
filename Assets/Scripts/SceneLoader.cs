@@ -12,4 +12,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Intro");
     }
+
+    void OnMouseDown()
+    {
+        SceneManager.LoadScene("MadsTest");
+    }
 }
