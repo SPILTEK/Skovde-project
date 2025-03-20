@@ -13,6 +13,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void OnMouseDown()
     {
         SceneManager.LoadScene("MadsTest");
