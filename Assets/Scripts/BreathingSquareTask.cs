@@ -8,6 +8,12 @@ public class BreathingSquareTask : MonoBehaviour
     private int currentSide = 0; // Tracks which side is being traced
     private bool taskCompleted = false;
 
+    private void Awake()
+    {
+        bottomSlider.gameObject.SetActive(false);
+        rightSlider.gameObject.SetActive(false);
+        leftSlider.gameObject.SetActive(false);
+    }
     void Update()
     {
         if (!taskCompleted)
@@ -23,57 +29,49 @@ public class BreathingSquareTask : MonoBehaviour
             Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             switch (currentSide)
             {
-                case 0: // Top Side
-                    if (IsTouchingTop(touchPos))
+                case 0: 
+                    
+                        if (topSlider.value >= 1)
                     {
-                        topSlider.value += Time.deltaTime * 0.5f;
-                        if (topSlider.value >= 1) currentSide++;
+                        topSlider.interactable = false;
+                        rightSlider.gameObject.SetActive(true);
+                        currentSide++;
                     }
+
                     break;
-                case 1: // Right Side
-                    if (IsTouchingRight(touchPos))
+                case 1:
+                  
+                        if (rightSlider.value >= 1)
                     {
-                        rightSlider.value += Time.deltaTime * 0.5f;
-                        if (rightSlider.value >= 1) currentSide++;
+                        rightSlider.interactable = false;
+                        bottomSlider.gameObject.SetActive(true);
+                        currentSide++;
                     }
+
                     break;
-                case 2: // Bottom Side
-                    if (IsTouchingBottom(touchPos))
+                case 2: 
+                  
+             
+                        if (bottomSlider.value >= 1)
                     {
-                        bottomSlider.value += Time.deltaTime * 0.5f;
-                        if (bottomSlider.value >= 1) currentSide++;
+                        bottomSlider.interactable = false;
+                        leftSlider.gameObject.SetActive(true);
+                        currentSide++;
                     }
+
                     break;
-                case 3: // Left Side
-                    if (IsTouchingLeft(touchPos))
+                case 3: 
+                        if (leftSlider.value >= 1)
                     {
-                        leftSlider.value += Time.deltaTime * 0.5f;
-                        if (leftSlider.value >= 1) CompleteTask();
+                        topSlider.interactable = false;
+                        CompleteTask();
                     }
+                    
                     break;
             }
         }
     }
 
-    bool IsTouchingTop(Vector2 touchPos)
-    {
-        return touchPos.y > breathingSquare.transform.position.y + breathingSquare.rectTransform.rect.height / 2;
-    }
-
-    bool IsTouchingBottom(Vector2 touchPos)
-    {
-        return touchPos.y < breathingSquare.transform.position.y - breathingSquare.rectTransform.rect.height / 2;
-    }
-
-    bool IsTouchingLeft(Vector2 touchPos)
-    {
-        return touchPos.x < breathingSquare.transform.position.x - breathingSquare.rectTransform.rect.width / 2;
-    }
-
-    bool IsTouchingRight(Vector2 touchPos)
-    {
-        return touchPos.x > breathingSquare.transform.position.x + breathingSquare.rectTransform.rect.width / 2;
-    }
 
     void CompleteTask()
     {
