@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CharacterSqueeze : MonoBehaviour
+public class Breathing : MonoBehaviour
 {
     // Squeeze factor: e.g., reducing width to 80% and increasing height to 120%
     public Vector2 squeezeFactor = new Vector2(0.8f, 1.2f);

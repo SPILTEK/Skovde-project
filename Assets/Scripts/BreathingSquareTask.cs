@@ -6,7 +6,8 @@ public class BreathingSquareTask : MonoBehaviour
     public Image breathingSquare; // The grid background
     public Slider topSlider, bottomSlider, leftSlider, rightSlider; // Sliders for each side
     private int currentSide = 0; // Tracks which side is being traced
-    private bool taskCompleted = false;
+    public bool taskCompleted = false;
+    public GameObject breathingArrow;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class BreathingSquareTask : MonoBehaviour
                     {
                         topSlider.interactable = false;
                         rightSlider.gameObject.SetActive(true);
+                        breathingArrow.SetActive(false);
                         currentSide++;
                     }
 
@@ -76,11 +78,23 @@ public class BreathingSquareTask : MonoBehaviour
     void CompleteTask()
     {
         taskCompleted = true;
-        breathingSquare.gameObject.SetActive(false);
-        topSlider.gameObject.SetActive(false);
+        currentSide = 0;
+        topSlider.value = 0;
+        bottomSlider.value = 0;
+        leftSlider.value = 0;
+        rightSlider.value = 0;
+        topSlider.interactable = true;
+        bottomSlider.interactable = true;
+        leftSlider.interactable = true;
+        rightSlider.interactable = true;
         bottomSlider.gameObject.SetActive(false);
-        leftSlider.gameObject.SetActive(false);
         rightSlider.gameObject.SetActive(false);
+        leftSlider.gameObject.SetActive(false);
+        //breathingSquare.gameObject.SetActive(false);
+        //topSlider.gameObject.SetActive(false);
+        //bottomSlider.gameObject.SetActive(false);
+        //leftSlider.gameObject.SetActive(false);
+        //rightSlider.gameObject.SetActive(false);
     }
 }
 
