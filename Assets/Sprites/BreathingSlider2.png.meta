@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BreathingSlider2_0: 4605149448226411664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
