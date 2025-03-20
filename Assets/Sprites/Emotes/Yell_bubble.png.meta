@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Yell_bubble_0: 2022374822356118903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
