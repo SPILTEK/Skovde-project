@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: e383ce44f6b07a94b80937d42988a4c9
+guid: d2701f93cdaeb4d4d99372997cee0d32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1633309439586571993
-    second: Students_0
-  - first:
-      213: -2867066372813990738
-    second: Students_1
-  - first:
-      213: -8272479191213192532
-    second: Students_2
-  - first:
-      213: 6473878957434140069
-    second: Students_3
-  - first:
-      213: -942308417714428427
-    second: Students_4
+      213: 6081253000217835118
+    second: Classroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Students_0
+      name: Classroom_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2
-        width: 181
-        height: 594
+        x: 0
+        y: 0
+        width: 800
+        height: 1600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7296625e7b15559e0800000000000000
-      internalID: -1633309439586571993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Students_1
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 2
-        width: 166
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea454f403522638d0800000000000000
-      internalID: -2867066372813990738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Students_2
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 2
-        width: 155
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: caa4deb4100423d80800000000000000
-      internalID: -8272479191213192532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Students_3
-      rect:
-        serializedVersion: 2
-        x: 473
-        y: 2
-        width: 162
-        height: 593
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a5fcb89c96d7d950800000000000000
-      internalID: 6473878957434140069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Students_4
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 2
-        width: 182
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f565459c7f3ce2f0800000000000000
-      internalID: -942308417714428427
+      spriteID: e6633434263f46450800000000000000
+      internalID: 6081253000217835118
       vertices: []
       indices: 
       edges: []
@@ -238,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -247,12 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Students_0: -1633309439586571993
-      Students_1: -2867066372813990738
-      Students_2: -8272479191213192532
-      Students_3: 6473878957434140069
-      Students_4: -942308417714428427
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

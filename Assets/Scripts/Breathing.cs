@@ -17,7 +17,7 @@ public class CharacterSqueeze : MonoBehaviour
     {
         // Cache the original scale to return to it later.
         originalScale = transform.localScale;
-        StartRepeatSqueeze();
+        //StartRepeatSqueeze();
     }
 
     /// <summary>

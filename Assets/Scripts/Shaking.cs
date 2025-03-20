@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CharacterShake : MonoBehaviour
+public class Shaking : MonoBehaviour
 {
     // Total duration of the shake effect
     public float shakeDuration = 0.5f;
@@ -23,7 +23,7 @@ public class CharacterShake : MonoBehaviour
     private void Start()
     {
         // Start the shake effect when the game starts
-        Shake();
+        //Shake();
     }
 
     // Starts the shake effect

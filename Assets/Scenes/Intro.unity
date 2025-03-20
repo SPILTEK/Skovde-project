@@ -273,8 +273,11 @@ MonoBehaviour:
   texts:
   - 'Nervin was up all night preparing for their presentation. '
   - 'They struggle with anxiety and get overwhelmed easily. '
-  - "Your goal is to help them stay calm and navigate their emotions, not to deliver
-    a perfect presentation\u2014just to make it through, one breath at a time."
+  - Your goal is to help them stay calm and navigate their emotions
+  - 'not to deliver a perfect presentation '
+  - 'just to make it through '
+  - 'one breath at a time. '
+  - '"It''s your turn, Nervin"'
 --- !u!61 &47509173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -309,7 +312,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -957.94214, y: -2078.7231}
+  m_Offset: {x: 109.10083, y: -134.22388}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -319,7 +322,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 40.37036, y: 49.801025}
+  m_Size: {x: 3061.1567, y: 4944.8647}
   m_EdgeRadius: 0
 --- !u!1 &466927714
 GameObject:
@@ -759,7 +762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1766479182
 RectTransform:
   m_ObjectHideFlags: 0
